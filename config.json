@@ -1,0 +1,65 @@
+{
+  "enable_faucet": true,
+  "enable_transfer": true,
+  "enable_contract_deploy": false,
+  "enable_bridge": false,
+  "bridge": {
+    "to_sepolia": {
+      "enabled": false,
+      "amount": {
+        "min": "0.00001",
+        "max": "0.00002"
+      },
+      "count": {
+        "min": 1,
+        "max": 3
+      }
+    },
+    "to_moonveil": {
+      "enabled": false,
+      "amount": {
+        "min": "0.00001",
+        "max": "0.00002"
+      },
+      "count": {
+        "min": 1,
+        "max": 3
+      }
+    }
+  },
+  "gas_price_multiplier": 1,
+  "max_retries": 5,
+  "base_wait_time": 10,
+  "transfer_amount_percentage": 10,
+  "contract": {
+    "contract_interactions": {
+      "enabled": false,
+      "count": {
+        "min": 3,
+        "max": 8
+      },
+      "types": ["setValue", "increment", "decrement", "reset", "contribute"]
+    }
+  },
+  "erc20": {
+    "enable_erc20": false,
+    "mint_amount": {
+      "min": 1000000,
+      "max": 10000000
+    },
+    "burn_percentage": 10,
+    "decimals": 18
+  },
+  "nft": {
+    "enable_nft": false,
+    "mint_count": {
+      "min": 2,
+      "max": 5
+    },
+    "burn_percentage": 20,
+    "supply": {
+      "min": 100,
+      "max": 500
+    }
+  }
+}
